@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #canvas{
+            background: #000;
+            /* width: 400px;
+            height: 400px; */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" ></canvas>
+
+    <script>
+        let canvas = document.getElementById('canvas');
+        let context = canvas.getContext('2d');
+        let cx = canvas.width = 400;
+        let cy = canvas.height = 400;
+
+        let grd = context.createLinearGradient(10, 10, 10, 350);
+        grd.addColorStop(0, 'rgb(255, 0, 0)');
+        grd.addColorStop(0.2, 'rgb(255, 165, 0)');
+        grd.addColorStop(0.3, 'rgb(255, 255, 0)');
+        grd.addColorStop(0.5, 'rgb(0, 255, 0)');
+        grd.addColorStop(0.7, 'rgb(0, 127, 255)');
+        grd.addColorStop(0.9, 'rgb(0, 0, 255)');
+        grd.addColorStop(1, 'rgb(139, 0, 255)');
+        context.fillStyle = grd;
+        context.fillRect(10, 10, 350, 350)
+        
+
+        // context.beginPath();
+        // context.rect(10, 10, 200, 300);
+        // context.strokeStyle = "white";
+        // context.stroke();
+        // context.fillStyle = "white";
+        // context.shadowBlur = 20;
+        // context.shadowColor = "#fff";
+        // context.fillRect(20, 20, 150, 100);
+        // context.strokeStyle = "black";
+        // context.strokeRect(30, 30, 30, 30);
+
+        // context.beginPath();
+        // context.arc(100, 100, 50, 0, Math.PI * 2, true);
+        // context.closePath();
+        // context.fillStyle = 'rgb(255,255,255)';
+        // context.fill();
+
+        // context.beginPath();
+        // context.moveTo(10, 10);
+        // context.lineTo(100, 100);
+        // context.lineWidth = 10;
+        // context.lineCap = 'round';
+        // context.strokeStyle = '#fff';
+        // context.stroke();
+
+    </script>
+</body>
+</html>
